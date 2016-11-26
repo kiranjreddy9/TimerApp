@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tg5-DP-SWh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aQ-gJ-UJL">
+                                <rect key="frame" x="20" y="164" width="560" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="tuU-xV-lPe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-QA-3jo">
+                                <rect key="frame" x="60" y="314" width="279" height="226"/>
+                                <state key="normal" title="Button" image="Play"/>
+                                <connections>
+                                    <action selector="PlayButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYo-IA-ZWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-me-R4k">
+                                <rect key="frame" x="281" y="314" width="279" height="226"/>
+                                <state key="normal" title="Button" image="Pause"/>
+                                <connections>
+                                    <action selector="PauseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NM7-Jy-q2H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7LE-K9-pWC"/>
+                            <constraint firstItem="KBy-me-R4k" firstAttribute="height" secondItem="VDA-QA-3jo" secondAttribute="height" id="8Tc-5c-iHd"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="JMW-kH-E0L"/>
+                            <constraint firstAttribute="trailing" secondItem="3aQ-gJ-UJL" secondAttribute="trailing" constant="20" id="Xqg-2s-brF"/>
+                            <constraint firstItem="KBy-me-R4k" firstAttribute="top" secondItem="3aQ-gJ-UJL" secondAttribute="bottom" constant="50" id="b92-zX-2cS"/>
+                            <constraint firstAttribute="trailing" secondItem="KBy-me-R4k" secondAttribute="trailing" constant="40" id="h64-yc-sEc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KBy-me-R4k" secondAttribute="bottom" constant="60" id="iR7-44-WTI"/>
+                            <constraint firstItem="KBy-me-R4k" firstAttribute="width" secondItem="VDA-QA-3jo" secondAttribute="width" id="pYA-li-0oY"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="baseline" secondItem="KBy-me-R4k" secondAttribute="baseline" id="r3X-Al-Vsu"/>
+                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="yG5-6k-u1H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="pKp-Kl-bxM">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="FmF-N9-cir">
+                            <connections>
+                                <action selector="ResetAction:" destination="BYZ-38-t0r" id="Jgw-pR-B5C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="PauseButton" destination="KBy-me-R4k" id="lno-jy-1kk"/>
+                        <outlet property="PlayButton" destination="VDA-QA-3jo" id="5Wj-1P-tkt"/>
+                        <outlet property="TimerLabel" destination="3aQ-gJ-UJL" id="OjY-vG-IXA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="319"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rfw-rb-Tro">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tg5-DP-SWh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X1j-R7-a47">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dkB-67-i4t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoS-F5-GSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="319"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pause" width="225" height="225"/>
+        <image name="Play" width="225" height="225"/>
+    </resources>
+</document>
