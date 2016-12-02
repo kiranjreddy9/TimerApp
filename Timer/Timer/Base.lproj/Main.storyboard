@@ -19,44 +19,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aQ-gJ-UJL">
-                                <rect key="frame" x="20" y="164" width="560" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="tuU-xV-lPe"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="104" width="600" height="53"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-QA-3jo">
-                                <rect key="frame" x="60" y="314" width="279" height="226"/>
-                                <state key="normal" title="Button" image="Play"/>
+                                <rect key="frame" x="20" y="355" width="265" height="225"/>
+                                <state key="normal" image="Play"/>
                                 <connections>
                                     <action selector="PlayButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYo-IA-ZWc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-me-R4k">
-                                <rect key="frame" x="281" y="314" width="279" height="226"/>
-                                <state key="normal" title="Button" image="Pause"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-me-R4k">
+                                <rect key="frame" x="315" y="355" width="265" height="225"/>
+                                <state key="normal" image="Pause"/>
                                 <connections>
                                     <action selector="PauseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NM7-Jy-q2H"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQX-9h-kkx">
+                                <rect key="frame" x="0.0" y="167" width="600" height="173"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusecell" id="Mo2-S9-ufK" customClass="TableViewCell" customModule="Timer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mo2-S9-ufK" id="oQr-js-aRJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl1-bu-UCF">
+                                                    <rect key="frame" x="106" y="11" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DF-we-drx">
+                                                    <rect key="frame" x="191" y="11" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxL-51-B8s">
+                                                    <rect key="frame" x="48" y="11" width="8" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8DF-we-drx" secondAttribute="bottom" constant="3" id="DTM-EC-mH8"/>
+                                                <constraint firstItem="pxL-51-B8s" firstAttribute="leading" secondItem="oQr-js-aRJ" secondAttribute="leadingMargin" constant="40" id="f6S-YV-HQM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pxL-51-B8s" secondAttribute="bottom" constant="3" id="jYM-2i-FSk"/>
+                                                <constraint firstItem="8DF-we-drx" firstAttribute="leading" secondItem="bl1-bu-UCF" secondAttribute="trailing" constant="50" id="n1w-7w-7AX"/>
+                                                <constraint firstItem="bl1-bu-UCF" firstAttribute="leading" secondItem="pxL-51-B8s" secondAttribute="trailing" constant="50" id="vaT-rw-lYw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bl1-bu-UCF" secondAttribute="bottom" constant="12" id="eH0-tt-2GZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="firsttimer" destination="bl1-bu-UCF" id="GeT-tu-cXF"/>
+                                            <outlet property="secondtimer" destination="8DF-we-drx" id="aGa-Sn-a3N"/>
+                                            <outlet property="timerno" destination="pxL-51-B8s" id="IDX-Yj-2Uk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="24J-wb-Z9u"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pMB-vP-sN4"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7LE-K9-pWC"/>
-                            <constraint firstItem="KBy-me-R4k" firstAttribute="height" secondItem="VDA-QA-3jo" secondAttribute="height" id="8Tc-5c-iHd"/>
-                            <constraint firstItem="VDA-QA-3jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="JMW-kH-E0L"/>
-                            <constraint firstAttribute="trailing" secondItem="3aQ-gJ-UJL" secondAttribute="trailing" constant="20" id="Xqg-2s-brF"/>
-                            <constraint firstItem="KBy-me-R4k" firstAttribute="top" secondItem="3aQ-gJ-UJL" secondAttribute="bottom" constant="50" id="b92-zX-2cS"/>
-                            <constraint firstAttribute="trailing" secondItem="KBy-me-R4k" secondAttribute="trailing" constant="40" id="h64-yc-sEc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KBy-me-R4k" secondAttribute="bottom" constant="60" id="iR7-44-WTI"/>
-                            <constraint firstItem="KBy-me-R4k" firstAttribute="width" secondItem="VDA-QA-3jo" secondAttribute="width" id="pYA-li-0oY"/>
-                            <constraint firstItem="VDA-QA-3jo" firstAttribute="baseline" secondItem="KBy-me-R4k" secondAttribute="baseline" id="r3X-Al-Vsu"/>
-                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="yG5-6k-u1H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KBy-me-R4k" secondAttribute="bottom" constant="20" id="71h-3B-4CY"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="top" secondItem="NQX-9h-kkx" secondAttribute="bottom" constant="15" id="Bjt-Cg-yCY"/>
+                            <constraint firstItem="KBy-me-R4k" firstAttribute="leading" secondItem="VDA-QA-3jo" secondAttribute="trailing" constant="30" id="HPO-Uc-9fq"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="I2g-GE-rCl"/>
+                            <constraint firstAttribute="trailing" secondItem="NQX-9h-kkx" secondAttribute="trailing" id="L76-xl-FjT"/>
+                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LqZ-d4-i2d"/>
+                            <constraint firstItem="KBy-me-R4k" firstAttribute="top" secondItem="NQX-9h-kkx" secondAttribute="bottom" constant="15" id="PSV-f3-1RZ"/>
+                            <constraint firstItem="3aQ-gJ-UJL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="QhY-2a-HPu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VDA-QA-3jo" secondAttribute="bottom" constant="20" id="Smo-zf-Yd0"/>
+                            <constraint firstAttribute="trailing" secondItem="KBy-me-R4k" secondAttribute="trailing" constant="20" id="es8-yS-R89"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="width" secondItem="KBy-me-R4k" secondAttribute="width" id="fc9-gs-wLW"/>
+                            <constraint firstAttribute="trailing" secondItem="3aQ-gJ-UJL" secondAttribute="trailing" id="mB2-Nt-CF1"/>
+                            <constraint firstItem="VDA-QA-3jo" firstAttribute="height" secondItem="KBy-me-R4k" secondAttribute="height" id="rO7-pH-xiz"/>
+                            <constraint firstItem="NQX-9h-kkx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wMT-fS-QVK"/>
+                            <constraint firstItem="NQX-9h-kkx" firstAttribute="top" secondItem="3aQ-gJ-UJL" secondAttribute="bottom" constant="10" id="zcj-04-xeM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="pKp-Kl-bxM">
+                        <barButtonItem key="leftBarButtonItem" title="Lap" id="2ym-lr-JjI">
+                            <connections>
+                                <action selector="Lapaction:" destination="BYZ-38-t0r" id="aZM-uN-HTJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Reset" id="FmF-N9-cir">
                             <connections>
                                 <action selector="ResetAction:" destination="BYZ-38-t0r" id="Jgw-pR-B5C"/>
@@ -67,6 +127,7 @@
                         <outlet property="PauseButton" destination="KBy-me-R4k" id="lno-jy-1kk"/>
                         <outlet property="PlayButton" destination="VDA-QA-3jo" id="5Wj-1P-tkt"/>
                         <outlet property="TimerLabel" destination="3aQ-gJ-UJL" id="OjY-vG-IXA"/>
+                        <outlet property="celltableview" destination="NQX-9h-kkx" id="XSp-1B-Svh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
